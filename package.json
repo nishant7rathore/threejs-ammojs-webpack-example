@@ -14,7 +14,11 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "enable3d": "~0.24.1"
+    "@yandeu/audio": "^0.0.2",
+    "@yandeu/keyboard": "^0.0.2",
+    "@yandeu/tap": "^0.0.3",
+    "dat.gui": "^0.7.7",
+    "enable3d": "^0.24.1"
   },
   "devDependencies": {
     "five-server": "^0.1.2",
