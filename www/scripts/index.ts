@@ -145,14 +145,11 @@ export class PhysicsTest extends Scene3D{
 
         sphere.body.on.collision((otherObject, event) => {
             if (otherObject.name !== 'bar') {
-                console.log('blueBox collided with another object than the ground'+otherObject.name )
-                //this.scene.remove(otherObject);
                 if( event == 'start'){
                     sphere.body.setVelocity(-this.sphereVel.x,-this.sphereVel.y,this.sphereVel.z);
                     this.scene.remove(otherObject);
                     this.sphereVel.x = -this.sphereVel.x;
                     this.sphereVel.y = -this.sphereVel.y;
-                    //this.tiles.remove(parseInt(otherObject.name));
                     this.tiles.splice(parseInt(otherObject.name), parseInt(otherObject.name));
                     this.physics.destroy(otherObject);
                 }
@@ -314,7 +311,6 @@ function captureKeyEvents(dis) {
 
     // watch all keys down
     keyboard.watch.down(keyCode => {
-        //console.log(keyboard.key('ArrowRight').isDown);
         if(keyboard.key('ArrowLeft').isDown || keyboard.key('ArrowRight').isDown){
             if(keyboard.key('ArrowRight').isDown){
                 moveTheBar(dis,-2);
@@ -457,8 +453,7 @@ function getTheBoxAndMaterial(dis,face1,face2,face3,face4,face5) {
     textureCube.texture.left.repeat.set(1, 1)
     textureCube.texture.right.repeat.set(1, 1)
 
-    //let box = dis.add.box({ x: -15+0*2, y: 0*2, z: -10},{custom:textureCube.materials})
-    //dis.scene.add(box);
+
     return textureCube.materials;
 }
 

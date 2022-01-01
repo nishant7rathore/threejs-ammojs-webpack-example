@@ -14,9 +14,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@yandeu/audio": "^0.0.2",
     "@yandeu/keyboard": "^0.0.2",
-    "@yandeu/tap": "^0.0.3",
     "dat.gui": "^0.7.7",
     "enable3d": "^0.24.1"
   },
